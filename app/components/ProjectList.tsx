@@ -31,7 +31,9 @@ const ProjectItem = ({ project }: { project: projectItemProps }) => {
         href={`/project?client=${slug}`}
       >
         <div
-          className={`h-full w-[4px] transition ${hovering && 'bg-indigo-500'}`}
+          className={`h-full w-[4px] transition hidden md:block ${
+            hovering && 'bg-indigo-500'
+          }`}
         />
 
         <div
@@ -39,13 +41,18 @@ const ProjectItem = ({ project }: { project: projectItemProps }) => {
           onMouseEnter={() => setHovering(true)}
           onMouseLeave={() => setHovering(false)}
         >
-          <span className="font-medium text-[10vw] lg:text-[120px] transition ml-4">
+          <span className="font-medium text-[10vw] lg:text-[120px] transition ml-2 md:ml-4">
             {client}
           </span>
           <span
-            className={`transition ${hovering ? 'opacity-1' : 'opacity-0'}`}
+            className={`hidden md:block transition ${
+              hovering ? 'opacity-1' : 'opacity-0'
+            }`}
           >
             <ChevronRight size={48} />
+          </span>
+          <span className="md:hidden transition">
+            <ChevronRight size={18} />
           </span>
         </div>
       </Link>

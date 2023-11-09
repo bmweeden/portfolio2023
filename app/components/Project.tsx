@@ -11,7 +11,6 @@ import { Gallery } from './Gallery';
 export const Project = () => {
   const [client] = useSearchParams().getAll('client');
   const [project, setProject] = useState<null | projectItemProps>(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const project = client_projects.filter(
@@ -20,17 +19,8 @@ export const Project = () => {
 
     if (project) {
       setProject(project);
-      setLoading(false);
     }
   }, [client]);
-
-  if (loading) {
-    return (
-      <div className="grid place-content-center">
-        <span>Loading....</span>
-      </div>
-    );
-  }
 
   if (project) {
     return (

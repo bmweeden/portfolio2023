@@ -3,6 +3,13 @@ export const client_projects = [
     client: 'eBay',
     slug: 'ebay',
     description: 'Project 1 description',
+    images: [
+      '/img/ebay/1.jpg',
+      '/img/ebay/2.jpg',
+      '/img/ebay/3.jpg',
+      '/img/ebay/4.jpg',
+      '/img/ebay/5.jpg',
+    ],
   },
   {
     client: 'Adidas',

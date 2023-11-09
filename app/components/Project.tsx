@@ -36,12 +36,12 @@ export const Project = () => {
     return (
       <div className="flex flex-col gap-12">
         <Header client={project.client} />
-        <div className="grid grid-cols-4">
-          <div className="col-span-1 flex">
+        <div className="flex flex-col gap-8 md:flex-row md:gap-16 xl:gap-24">
+          <div>
             <Gallery images={project.images} />
           </div>
-          <div className="col-span-3 flex">
-            <Description />
+          <div>
+            <Description description={project.description} />
           </div>
         </div>
       </div>
@@ -57,9 +57,7 @@ const Header = ({ client }: { client: string }) => {
       <div className="absolute w-full h-full flex items-center">
         <div className="h-full w-1" />
         <div className="flex items-center px-4">
-          <h1
-            className={`font-medium text-[10vw] lg:text-[120px] translate-x-0 transition`}
-          >
+          <h1 className={`font-medium text-[10vw] lg:text-[120px]`}>
             {client}
           </h1>
         </div>
@@ -69,10 +67,11 @@ const Header = ({ client }: { client: string }) => {
   );
 };
 
-const Description = () => {
+const Description = ({ description }: { description: string }) => {
   return (
-    <>
-      <p>Description</p>
-    </>
+    <div
+      className="flex flex-col gap-2"
+      dangerouslySetInnerHTML={{ __html: description }}
+    />
   );
 };

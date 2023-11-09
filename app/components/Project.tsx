@@ -6,7 +6,7 @@ import { client_projects } from '../data/projects';
 import { useSearchParams } from 'next/navigation';
 import { projectItemProps } from '../definitions';
 import { GridGenerator } from './GridGenerator';
-import { Camera } from 'lucide-react';
+import { Gallery } from './Gallery';
 
 export const Project = () => {
   const [client] = useSearchParams().getAll('client');
@@ -66,22 +66,6 @@ const Header = ({ client }: { client: string }) => {
       </div>
       <GridGenerator />
     </div>
-  );
-};
-
-const Gallery = () => {
-  const handleClick = () => {
-    console.log('open gallery');
-  };
-
-  return (
-    <button
-      className="flex items-center gap-2 px-4 py-2 rounded border bg-indigo-600 border-indigo-700 text-white font-semibold transition hover:bg-indigo-700"
-      onClick={handleClick}
-    >
-      <Camera size={18} />
-      <span>Screenshots</span>
-    </button>
   );
 };
 

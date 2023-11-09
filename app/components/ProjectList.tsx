@@ -27,7 +27,7 @@ const ProjectItem = ({ project }: { project: projectItemProps }) => {
   return (
     <div className="flex flex-wrap relative">
       <Link
-        className="h-full w-full flex items-center absolute capitalize"
+        className="h-full w-full flex items-center absolute"
         href={`/project?client=${slug}`}
       >
         <div

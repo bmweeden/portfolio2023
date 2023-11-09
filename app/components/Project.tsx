@@ -31,18 +31,22 @@ export const Project = () => {
     );
   }
 
-  return (
-    <div className="flex flex-col">
-      <Header client={project.client} />
-    </div>
-  );
+  if (project) {
+    return (
+      <div className="flex flex-col">
+        <Header client={project.client} />
+      </div>
+    );
+  }
+
+  return null;
 };
 
 const Header = ({ client }: { client: string }) => {
   return (
     <div className="flex flex-wrap relative border-t">
       <div className="absolute w-full h-full flex items-center">
-        <div className="h-full w-2" />
+        <div className="h-full w-1" />
         <div className="flex items-center px-4">
           <h1
             className={`font-medium text-[10vw] lg:text-[120px] translate-x-0 transition`}

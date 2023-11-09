@@ -1,5 +1,7 @@
 import { ProjectList } from './components/ProjectList';
 
-export default function Home() {
+const Home = () => {
   return <ProjectList />;
-}
+};
+
+export default Home;

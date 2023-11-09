@@ -21,7 +21,7 @@ export const client_projects = [
   },
   {
     client: 'tide',
-    name: 'tide',
+    slug: 'tide',
     description: 'Project 5 description',
   },
 ];

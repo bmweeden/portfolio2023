@@ -1,12 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 import { client_projects } from '../data/projects';
 import { projectItemProps } from '../definitions';
 import { GridGenerator } from './GridGenerator';
-import { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
 
 export const ProjectList = () => {
   return (
@@ -28,7 +28,7 @@ const ProjectItem = ({ project }: { project: projectItemProps }) => {
     <div className="flex flex-wrap relative">
       <Link
         className="h-full w-full flex items-center absolute capitalize"
-        href={`/projects?client=${slug}`}
+        href={`/project?client=${slug}`}
       >
         <div
           className={`h-full w-[4px] transition ${hovering && 'bg-indigo-500'}`}

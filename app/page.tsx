@@ -1,7 +1,7 @@
-export default function Home() {
-  return (
-    <>
-      <h1>Page</h1>
-    </>
-  );
-}
+import { ProjectList } from './components/ProjectList';
+
+const Home = () => {
+  return <ProjectList />;
+};
+
+export default Home;

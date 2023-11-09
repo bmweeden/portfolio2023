@@ -28,7 +28,7 @@ const ProjectItem = ({ project }: { project: projectItemProps }) => {
     <div className="flex flex-wrap relative">
       <Link
         className="h-full w-full flex items-center absolute capitalize"
-        href={`/projects/${slug}`}
+        href={`/projects?client=${slug}`}
       >
         <div
           className={`h-full w-[4px] transition ${hovering && 'bg-indigo-500'}`}

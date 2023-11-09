@@ -45,8 +45,8 @@ const Header = ({ client }: { client: string }) => {
   return (
     <div className="flex flex-wrap relative border-t">
       <div className="absolute w-full h-full flex items-center">
-        <div className="h-full w-1" />
-        <div className="flex items-center px-4">
+        <div className="h-full" />
+        <div className="flex items-center px-3">
           <h1 className={`font-medium text-[10vw] lg:text-[120px]`}>
             {client}
           </h1>

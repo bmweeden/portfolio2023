@@ -19,12 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-slate-50 ${inter.className}`}>
-        <div className="h-screen flex justify-center">
+        <div className="flex justify-center">
           <div className="container flex flex-col justify-between px-4">
             <Header />
-            <div className="h-full flex-grow overflow-hidden">
-              <div className="h-full overflow-auto">{children}</div>
-            </div>
+
+            <div className="h-full">{children}</div>
+
             <Footer />
           </div>
         </div>
